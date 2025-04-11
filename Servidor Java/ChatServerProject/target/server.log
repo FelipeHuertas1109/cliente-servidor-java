@@ -1,0 +1,714 @@
+abr 06, 2025 7:34:32 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 06, 2025 7:34:40 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.0.3
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para pepe: Éxito
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente pepe se ha conectado.
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a pepe
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a pepe
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a pepe
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a pepe
+abr 06, 2025 7:34:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a pepe
+abr 06, 2025 7:35:05 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.0.3
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para maria: Éxito
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente maria se ha conectado.
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a maria
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a maria
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a maria
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a maria
+abr 06, 2025 7:35:22 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a maria
+abr 06, 2025 7:35:28 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #prueba enviado a maria
+abr 06, 2025 7:35:35 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #prueba desde maria: prueba
+abr 06, 2025 7:35:38 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #prueba enviado a pepe
+abr 06, 2025 7:35:41 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #prueba desde pepe: jj
+abr 06, 2025 7:35:45 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con maria enviado a pepe
+abr 06, 2025 7:35:52 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a maria desde pepe: h
+abr 06, 2025 7:35:59 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 06, 2025 7:35:59 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: maria
+abr 06, 2025 7:36:00 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 06, 2025 7:36:00 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: pepe
+abr 08, 2025 3:30:50 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 08, 2025 3:34:12 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 08, 2025 3:40:58 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 08, 2025 3:41:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 08, 2025 3:42:37 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al registrar usuario: Data truncation: Data too long for column 'photo' at row 1
+abr 08, 2025 3:43:58 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al registrar usuario: Data truncation: Data too long for column 'photo' at row 1
+abr 08, 2025 3:44:09 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para laura: Fallido (usuario no encontrado)
+abr 08, 2025 3:44:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para felipe: Fallido (usuario no encontrado)
+abr 08, 2025 3:45:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al registrar usuario: Data truncation: Data too long for column 'photo' at row 1
+abr 08, 2025 3:45:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para frieren: Fallido (usuario no encontrado)
+abr 08, 2025 3:45:28 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para frieren: Fallido (usuario no encontrado)
+abr 08, 2025 3:47:03 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para frieren: Fallido (usuario no encontrado)
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Registro de usuario pepe: Éxito
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente pepe se ha conectado.
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a pepe
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a pepe
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a pepe
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a pepe
+abr 08, 2025 4:00:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a pepe
+abr 08, 2025 4:00:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:00:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: pepe
+abr 08, 2025 4:03:54 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 08, 2025 4:05:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para pepe: Éxito
+abr 08, 2025 4:05:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:05:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:05:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente pepe se ha conectado.
+abr 08, 2025 4:05:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a pepe
+abr 08, 2025 4:05:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a pepe
+abr 08, 2025 4:05:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a pepe
+abr 08, 2025 4:05:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a pepe
+abr 08, 2025 4:05:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a pepe
+abr 08, 2025 4:07:29 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 08, 2025 4:07:37 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para frieren: Fallido (usuario no encontrado)
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Registro de usuario papu: Éxito
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente papu se ha conectado.
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a papu
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a papu
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a papu
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a papu
+abr 08, 2025 4:08:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a papu
+abr 08, 2025 4:08:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:08:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Canal test creado por pepe
+abr 08, 2025 4:08:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test enviado a pepe
+abr 08, 2025 4:08:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a pepe
+abr 08, 2025 4:08:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test enviado a pepe
+abr 08, 2025 4:09:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test enviado a pepe
+abr 08, 2025 4:09:11 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Solicitud de unión al canal test por papu enviada al creador pepe
+abr 08, 2025 4:09:14 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Solicitud de unión al canal test por papu aprobada
+abr 08, 2025 4:09:17 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test enviado a papu
+abr 08, 2025 4:09:21 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test desde papu: haol
+abr 08, 2025 4:09:28 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test desde pepe: como estas
+abr 08, 2025 4:37:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:37:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: pepe
+abr 08, 2025 4:37:32 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:37:32 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: papu
+abr 08, 2025 4:40:03 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 08, 2025 4:40:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para papu: Éxito
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente papu se ha conectado.
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a papu
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a papu
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a papu
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a papu
+abr 08, 2025 4:40:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a papu
+abr 08, 2025 4:40:45 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Registro de usuario romero: Éxito
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente romero se ha conectado.
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a romero
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a romero
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a romero
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a romero
+abr 08, 2025 4:41:04 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a romero
+abr 08, 2025 4:41:49 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Registro de usuario laura2: Éxito
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente laura2 se ha conectado.
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a laura2
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a laura2
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a laura2
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a laura2
+abr 08, 2025 4:42:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a laura2
+abr 08, 2025 4:43:12 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con papu enviado a romero
+abr 08, 2025 4:43:34 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: hola
+abr 08, 2025 4:43:38 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con romero enviado a papu
+abr 08, 2025 4:43:45 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a romero desde papu: hola
+abr 08, 2025 4:43:58 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con laura2 enviado a papu
+abr 08, 2025 4:44:02 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a laura2 desde papu: hola
+abr 08, 2025 4:44:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: como tas
+abr 08, 2025 4:45:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con papu enviado a laura2
+abr 08, 2025 4:45:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al crear canal: Duplicate entry 'test' for key 'channels.name'
+abr 08, 2025 4:45:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test enviado a laura2
+abr 08, 2025 4:45:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a laura2
+abr 08, 2025 4:45:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test enviado a laura2
+abr 08, 2025 4:46:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 08, 2025 4:46:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Canal test2 creado por laura2
+abr 08, 2025 4:46:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test2 enviado a laura2
+abr 08, 2025 4:46:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a laura2
+abr 08, 2025 4:46:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test2 enviado a laura2
+abr 08, 2025 4:46:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Usuario papu agregado al canal test2
+abr 08, 2025 4:46:34 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test2 desde laura2: hola
+abr 08, 2025 4:48:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test2 enviado a papu
+abr 08, 2025 4:48:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test2 desde laura2: teste
+abr 08, 2025 4:48:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test2 desde laura2: dasd
+abr 08, 2025 4:48:11 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test2 desde laura2: gsdfgsd
+abr 08, 2025 4:48:13 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test2 desde laura2: gsdfgs
+abr 08, 2025 4:48:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Solicitud de unión al canal test2 por romero enviada al creador laura2
+abr 08, 2025 4:48:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Solicitud de unión al canal test2 por romero aprobada
+abr 08, 2025 4:48:22 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: sdafasd
+abr 08, 2025 4:48:25 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #test2 enviado a romero
+abr 08, 2025 4:48:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test2 desde romero: fsdfas
+abr 08, 2025 4:48:34 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #test2 desde romero: fasdfasd
+abr 08, 2025 4:50:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: gdfgs
+abr 08, 2025 4:50:20 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a romero desde papu: gsdfg
+abr 08, 2025 4:50:55 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 08, 2025 4:50:55 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: romero
+abr 10, 2025 5:30:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 10, 2025 5:31:21 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para papu: Éxito
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente papu se ha conectado.
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a papu
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a papu
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a papu
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a papu
+abr 10, 2025 5:31:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a papu
+abr 10, 2025 5:31:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 5:31:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para laura: Fallido (usuario no encontrado)
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para romero: Éxito
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente romero se ha conectado.
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a romero
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a romero
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a romero
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a romero
+abr 10, 2025 5:32:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a romero
+abr 10, 2025 5:32:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con papu enviado a romero
+abr 10, 2025 5:32:17 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: como estas
+abr 10, 2025 5:32:21 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con romero enviado a papu
+abr 10, 2025 5:32:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744324355661.dat guardado en el servidor para romero
+abr 10, 2025 5:32:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a romero desde papu: Archivo enviado: CARTA PARA SANCKS.txt
+abr 10, 2025 5:33:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Registro de usuario jorge: Éxito
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente jorge se ha conectado.
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a jorge
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a jorge
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a jorge
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a jorge
+abr 10, 2025 5:34:05 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a jorge
+abr 10, 2025 5:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 5:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Canal archivostest creado por jorge
+abr 10, 2025 5:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #archivostest enviado a jorge
+abr 10, 2025 5:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a jorge
+abr 10, 2025 5:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #archivostest enviado a jorge
+abr 10, 2025 5:34:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Usuario papu agregado al canal archivostest
+abr 10, 2025 5:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Usuario romero agregado al canal archivostest
+abr 10, 2025 5:34:44 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #archivostest enviado a papu
+abr 10, 2025 5:34:46 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #archivostest enviado a romero
+abr 10, 2025 5:34:50 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #archivostest desde romero: hola
+abr 10, 2025 5:35:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744324506751.dat guardado en el servidor para #archivostest
+abr 10, 2025 5:35:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744324506765.dat guardado en el servidor para #archivostest
+abr 10, 2025 5:35:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744324506774.dat guardado en el servidor para #archivostest
+abr 10, 2025 5:35:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al guardar mensaje: Incorrect string value: '\xB5\xB5\xB5\xB5\x0D\x0A...' for column 'file' at row 1
+abr 10, 2025 5:35:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado al canal #archivostest desde romero: Archivo enviado: Agua.pdf
+abr 10, 2025 6:00:20 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 10, 2025 6:00:54 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para romero: Éxito
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente romero se ha conectado.
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a romero
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a romero
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a romero
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a romero
+abr 10, 2025 6:01:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a romero
+abr 10, 2025 6:01:09 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para papu: Éxito
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente papu se ha conectado.
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a papu
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a papu
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a papu
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a papu
+abr 10, 2025 6:01:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a papu
+abr 10, 2025 6:01:25 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 6:01:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para laura: Fallido (usuario no encontrado)
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para laura2: Éxito
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente laura2 se ha conectado.
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a laura2
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a laura2
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a laura2
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a laura2
+abr 10, 2025 6:01:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a laura2
+abr 10, 2025 6:01:50 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #archivostest enviado a romero
+abr 10, 2025 6:01:53 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #archivostest enviado a papu
+abr 10, 2025 6:01:55 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Solicitud de unión al canal archivostest por laura2 enviada al creador jorge
+abr 10, 2025 6:02:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con papu enviado a romero
+abr 10, 2025 6:02:22 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: hola como estas
+abr 10, 2025 6:02:25 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con romero enviado a papu
+abr 10, 2025 6:02:30 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a romero desde papu: hola
+abr 10, 2025 6:02:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744326156573.dat guardado en el servidor para papu
+abr 10, 2025 6:02:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al guardar mensaje: Incorrect string value: '\xB5\xB5\xB5\xB5\x0D\x0A...' for column 'file' at row 1
+abr 10, 2025 6:02:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: Archivo enviado: daniela.pdf
+abr 10, 2025 6:03:40 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744326220043.dat guardado en el servidor para papu
+abr 10, 2025 6:03:40 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde romero: Archivo enviado: CARTA PARA SANCKS.txt
+abr 10, 2025 6:06:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:06:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: romero
+abr 10, 2025 6:06:37 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:06:37 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: papu
+abr 10, 2025 6:06:38 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:06:38 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: laura2
+abr 10, 2025 6:33:50 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 10, 2025 6:34:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para papu: Éxito
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente papu se ha conectado.
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a papu
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a papu
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a papu
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a papu
+abr 10, 2025 6:34:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a papu
+abr 10, 2025 6:34:28 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para romero: Éxito
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente romero se ha conectado.
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a romero
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a romero
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a romero
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a romero
+abr 10, 2025 6:34:35 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a romero
+abr 10, 2025 6:34:45 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para laura2: Éxito
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente laura2 se ha conectado.
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a laura2
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a laura2
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a laura2
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a laura2
+abr 10, 2025 6:34:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a laura2
+abr 10, 2025 7:06:40 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 10, 2025 7:07:02 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para papu: Éxito
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente papu se ha conectado.
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a papu
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a papu
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a papu
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a papu
+abr 10, 2025 7:07:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a papu
+abr 10, 2025 7:07:17 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para laura2: Éxito
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente laura2 se ha conectado.
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a laura2
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a laura2
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a laura2
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a laura2
+abr 10, 2025 7:07:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a laura2
+abr 10, 2025 7:07:27 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con papu enviado a laura2
+abr 10, 2025 7:07:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde laura2: holi
+abr 10, 2025 7:07:39 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con laura2 enviado a papu
+abr 10, 2025 7:07:44 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a laura2 desde papu: uwu
+abr 10, 2025 7:07:54 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo 1744330074612.pdf guardado en el servidor para papu
+abr 10, 2025 7:07:54 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744330074619.dat guardado en el servidor para papu
+abr 10, 2025 7:07:54 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al guardar mensaje: Incorrect string value: '\xB5\xB5\xB5\xB5\x0D\x0A...' for column 'file' at row 1
+abr 10, 2025 7:07:54 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde laura2: Archivo enviado: daniela.pdf
+abr 10, 2025 7:08:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:08:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: laura2
+abr 10, 2025 7:08:28 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:08:28 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: papu
+abr 10, 2025 7:09:22 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+abr 10, 2025 7:09:54 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para laura2: Éxito
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente laura2 se ha conectado.
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a laura2
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a laura2
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a laura2
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a laura2
+abr 10, 2025 7:10:01 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a laura2
+abr 10, 2025 7:10:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para papu: Éxito
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente papu se ha conectado.
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a papu
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a papu
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a papu
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a papu
+abr 10, 2025 7:10:15 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a papu
+abr 10, 2025 7:10:17 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con laura2 enviado a papu
+abr 10, 2025 7:10:21 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a laura2 desde papu: owo
+abr 10, 2025 7:10:26 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con papu enviado a laura2
+abr 10, 2025 7:10:38 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo 1744330238664.pdf guardado en el servidor para papu
+abr 10, 2025 7:10:38 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744330238678.dat guardado en el servidor para papu
+abr 10, 2025 7:10:38 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al guardar mensaje: Incorrect string value: '\xB5\xB5\xB5\xB5\x0D\x0A...' for column 'file' at row 1
+abr 10, 2025 7:10:38 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a papu desde laura2: Archivo enviado: daniela.pdf
+abr 10, 2025 7:11:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo 1744330270708.pdf guardado en el servidor para laura2
+abr 10, 2025 7:11:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Archivo file_1744330270710.dat guardado en el servidor para laura2
+abr 10, 2025 7:11:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Error al guardar mensaje: Incorrect string value: '\xB5\xB5\xB5\xB5\x0D\x0A...' for column 'file' at row 1
+abr 10, 2025 7:11:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a laura2 desde papu: Archivo enviado: GUIA CALCULO 2.pdf
+abr 10, 2025 7:11:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:11:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: laura2
+abr 10, 2025 7:11:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+abr 10, 2025 7:11:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: papu
