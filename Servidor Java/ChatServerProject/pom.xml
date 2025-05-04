@@ -29,12 +29,12 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>ConfigLoaderProject</artifactId>
+            <artifactId>DatabaseConnectorProject</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>DatabaseConnectorProject</artifactId>
+            <artifactId>ConfigLoaderProject</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
