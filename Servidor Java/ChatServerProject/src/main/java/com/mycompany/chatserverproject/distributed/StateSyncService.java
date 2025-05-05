@@ -1,44 +1,42 @@
-// src/main/java/com/mycompany/chatserverproject/distributed/StateSyncService.java
 package com.mycompany.chatserverproject.distributed;
 
+import com.fasterxml.jackson.core.JsonGenerator;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.util.Set;
+import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-/**
- * Servicio que sincroniza estado (FULL_DUMP y DIFF) entre servidores.
- */
 public class StateSyncService {
+    private static final boolean DEBUG = true;
+
     private final int port;
     private final UserFileRegistry registry;
     private final HeartbeatReceiver hbReceiver;
-    private final ObjectMapper mapper = new ObjectMapper();
+    private final ObjectMapper mapper;
     private final ExecutorService pool = Executors.newCachedThreadPool();
 
-    /**
-     * @param port       Puerto TCP para FULL_DUMP y DIFF.
-     * @param registry   Registro local de usuarios y archivos.
-     * @param hbReceiver Para conocer la lista de peers vivos.
-     */
     public StateSyncService(int port,
                             UserFileRegistry registry,
                             HeartbeatReceiver hbReceiver) {
         this.port       = port;
         this.registry   = registry;
         this.hbReceiver = hbReceiver;
+
+        // Construye y configura el mapper para que NO cierre los streams
+        this.mapper = new ObjectMapper();
+        mapper.getFactory().configure(JsonGenerator.Feature.AUTO_CLOSE_TARGET, false);
+        mapper.getFactory().configure(JsonParser.Feature.AUTO_CLOSE_SOURCE, false);
     }
 
-    /**
-     * Arranca el listener de FULL_DUMP y DIFF entrantes.
-     */
     public void start() throws Exception {
         ServerSocket serverSocket = new ServerSocket(port);
+        debug("start() → escuchando en puerto " + port);
         pool.submit(() -> {
             try {
                 while (true) {
@@ -52,81 +50,100 @@ public class StateSyncService {
     }
 
     private void handleConnection(Socket sock) {
+        debug("handleConnection(): conexión de " + sock.getRemoteSocketAddress());
         try (InputStream in = sock.getInputStream();
              OutputStream out = sock.getOutputStream()) {
 
-            // 1) Leemos el SyncRequest (FULL_DUMP o DIFF)
+            debug("handleConnection(): leyendo SyncRequest…");
             SyncRequest req = mapper.readValue(in, SyncRequest.class);
+            debug("handleConnection(): tipo=" + req.getType());
 
             if (req.getType() == SyncRequest.Type.FULL_DUMP) {
-                // Envío del volcado completo
-                FullDump dump = new FullDump(registry.getAllUsers(),
-                                             registry.getAllFiles());
+                debug("→ FULL_DUMP: enviando dump a " + sock.getRemoteSocketAddress());
+                FullDump dump = new FullDump(registry.getAllUsers(), registry.getAllFiles());
                 mapper.writeValue(out, dump);
+                out.flush();
+                debug("→ FULL_DUMP enviado. Usuarios=" + dump.getUsers().size()
+                      + ", Archivos=" + dump.getFiles().size());
 
             } else if (req.getType() == SyncRequest.Type.DIFF) {
-                // 2) Leemos el Diff y lo aplicamos
+                debug("→ DIFF: leyendo diff…");
                 Diff diff = mapper.readValue(in, Diff.class);
+                debug("→ DIFF tipo=" + diff.getType()
+                      + (diff.getUserInfo()!=null ? " usuario=" + diff.getUserInfo().getUsername() : ""));
                 registry.applyDiff(diff);
+                debug("→ DIFF aplicado");
             }
 
         } catch (Exception e) {
+            System.err.println("[ERROR] handleConnection para "
+                               + sock.getRemoteSocketAddress() + ": " + e.getMessage());
             e.printStackTrace();
+        } finally {
+            debug("handleConnection(): cerrando socket " + sock.getRemoteSocketAddress());
+            try { sock.close(); } catch (Exception ignore) {}
         }
     }
 
-    /**
-     * Solicita un volcado completo a otro servidor.
-     */
     public void requestFullDump(String host, int port) throws Exception {
+        debug("requestFullDump() → conectando a " + host + ":" + port);
         try (Socket sock = new Socket(host, port);
              OutputStream out = sock.getOutputStream();
-             InputStream  in  = sock.getInputStream()) {
+             InputStream in  = sock.getInputStream()) {
 
-            // Pido FULL_DUMP
+            debug("→ enviando FULL_DUMP request");
             SyncRequest req = new SyncRequest(SyncRequest.Type.FULL_DUMP);
             mapper.writeValue(out, req);
+            out.flush();
 
-            // Recibo el dump y lo integro
+            debug("→ esperando FullDump…");
             FullDump dump = mapper.readValue(in, FullDump.class);
+            debug("→ recibido FullDump Usuarios=" + dump.getUsers().size()
+                  + ", Archivos=" + dump.getFiles().size());
             registry.integrateFullDump(dump);
+
+        } catch (Exception e) {
+            System.err.println("[ERROR] requestFullDump con " + host + ":" + port
+                               + " → " + e.getMessage());
+            throw e;
         }
     }
 
-    /**
-     * Envía un Diff a todos los peers vivos.
-     */
     public void broadcastDiff(Diff diff) {
-        Set<String> peers = hbReceiver.getLiveServers().keySet();
-        for (String peerId : peers) {
-            String host = hbReceiver.getHostForServer(peerId);
-            if (host != null) {
-                sendDiffToPeer(host, port, diff);
-            }
+        debug("broadcastDiff() → peers vivos: " + hbReceiver.getLiveServers());
+        for (Map.Entry<String,String> e : hbReceiver.getLiveServers().entrySet()) {
+            String host = e.getValue();
+            debug("→ enviando DIFF a " + host);
+            sendDiffToPeer(host, port, diff);
         }
-    }
-
-    /**
-     * Envía un SyncRequest.TYPE.DIFF + el objeto Diff a un solo peer.
-     */
-    public void sendDiff(Diff diff) {
-        // para compatibilidad con ChatServer que llama a sendDiff(...)
-        broadcastDiff(diff);
     }
 
     private void sendDiffToPeer(String host, int port, Diff diff) {
+        debug("sendDiffToPeer() → conectando a " + host + ":" + port);
         try (Socket sock = new Socket(host, port);
              OutputStream out = sock.getOutputStream()) {
 
-            // 1) Indico que es un DIFF
+            debug("→ enviando SyncRequest.DIFF");
             SyncRequest req = new SyncRequest(SyncRequest.Type.DIFF);
             mapper.writeValue(out, req);
+            out.flush();
 
-            // 2) Envío el objeto Diff
+            debug("→ enviando Diff tipo=" + diff.getType());
             mapper.writeValue(out, diff);
+            out.flush();
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            debug("→ DIFF enviado correctamente");
+
+        } catch (Exception ex) {
+            System.err.println("[ERROR] sendDiffToPeer a " + host + ":" + port
+                               + " → " + ex.getMessage());
+            ex.printStackTrace();
+        }
+    }
+
+    private void debug(String msg) {
+        if (DEBUG) {
+            System.out.println("[DEBUG][" + Thread.currentThread().getName() + "] " + msg);
         }
     }
 }

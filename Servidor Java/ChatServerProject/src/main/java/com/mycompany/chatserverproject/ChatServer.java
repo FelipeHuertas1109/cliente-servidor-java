@@ -1,49 +1,40 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-/**
- *
- * @author Estudiante_MCA
- */
-
 package com.mycompany.chatserverproject;
 
 import com.mycompany.databaseconnectorproject.DatabaseConnection;
+import com.mycompany.chatserverproject.distributed.UserFileRegistry;
+import com.mycompany.chatserverproject.distributed.StateSyncService;
+import com.mycompany.chatserverproject.distributed.Diff;
+import com.mycompany.chatserverproject.distributed.UserInfo;
+import com.mycompany.chatserverproject.distributed.HeartbeatReceiver;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+
 import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.sql.*;
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.*;
-import com.mycompany.chatserverproject.distributed.UserFileRegistry;
-import com.mycompany.chatserverproject.distributed.StateSyncService;
-import com.mycompany.chatserverproject.distributed.Diff;
-import com.mycompany.chatserverproject.distributed.UserInfo;
-import com.mycompany.chatserverproject.distributed.FileInfo;
-
 import java.util.Base64;
-import java.util.Set;
-import java.util.HashSet;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-
 
 public class ChatServer {
-
     private final int port;
     private final int maxConnections;
     private final DatabaseConnection db;
     private ServerUI ui;
-    private final Map<String, PrintWriter> clients = new HashMap<>();
-    private final Map<String, Set<PrintWriter>> channels = new HashMap<>();
+    private final Map<String, PrintWriter> clients = new ConcurrentHashMap<>();
+    private final Map<String, Set<PrintWriter>> channels = new ConcurrentHashMap<>();
     private final CryptoService cryptoService = new CryptoService();
     private final Logger logger;
-    // inyectados desde Main
+
+    // ► Inyectados desde Main
+    private String serverId;
     private UserFileRegistry registry;
     private StateSyncService syncService;
-    private String serverId;
-
+    private HeartbeatReceiver hbReceiver;
+    private int chatPort;
 
     public ChatServer(int port, int maxConnections, DatabaseConnection db, ServerUI ui) {
         this.port = port;
@@ -56,113 +47,128 @@ public class ChatServer {
 
     private void setupLogger() {
         try {
-            FileHandler fileHandler = new FileHandler("server.log", true);
-            fileHandler.setFormatter(new SimpleFormatter());
-            logger.addHandler(fileHandler);
+            FileHandler fh = new FileHandler("server.log", true);
+            fh.setFormatter(new SimpleFormatter());
+            logger.addHandler(fh);
             logger.setLevel(Level.ALL);
             logger.setUseParentHandlers(false);
         } catch (IOException e) {
-            System.err.println("Error al configurar el logger: " + e.getMessage());
+            System.err.println("Error logger: " + e.getMessage());
         }
     }
 
-    private void log(String message) {
-        logger.info(message);
-        if (ui != null) {
-            ui.displayMessage(message);
-        } else {
-            System.out.println(message);
-        }
-    }
-
-    public void setUI(ServerUI ui) {
-        this.ui = ui;
-    }
-    /** Identificador único de este servidor */
+    // ► Setters para inyección
     public void setServerId(String serverId) {
         this.serverId = serverId;
     }
-
-    /** Registry distribuido para usuarios y archivos */
     public void setUserFileRegistry(UserFileRegistry registry) {
         this.registry = registry;
     }
-
-    /** Servicio para enviar diffs a los pares */
     public void setStateSyncService(StateSyncService syncService) {
         this.syncService = syncService;
     }
+    public void setHeartbeatReceiver(HeartbeatReceiver hbReceiver) {
+        this.hbReceiver = hbReceiver;
+    }
+    public void setChatPort(int chatPort) {
+        this.chatPort = chatPort;
+    }
+    public void setUI(ServerUI ui) {
+        this.ui = ui;
+    }
 
+    private void log(String msg) {
+        logger.info(msg);
+        if (ui != null) ui.displayMessage(msg);
+    }
 
     public void start() {
-        try (ServerSocket serverSocket = new ServerSocket(port)) {
+        try (ServerSocket ss = new ServerSocket(port)) {
             log("Servidor iniciado en puerto " + port);
             while (true) {
                 if (clients.size() < maxConnections) {
-                    Socket clientSocket = serverSocket.accept();
-                    Thread clientThread = new Thread(new ClientHandler(clientSocket, this));
-                    clientThread.start();
-                    log("Nuevo cliente conectado: " + clientSocket.getInetAddress());
+                    Socket sock = ss.accept();
+                    new Thread(new ClientHandler(sock, this)).start();
+                    log("Nuevo cliente conectado: " + sock.getInetAddress());
                 }
             }
         } catch (IOException e) {
-            log("Error al iniciar el servidor: " + e.getMessage());
+            log("Error servidor: " + e.getMessage());
         }
     }
 
+    // ─── Alta / Baja de clientes ────────────────────
     public synchronized void addClient(String username, PrintWriter out) {
         clients.put(username, out);
+
         if (registry != null && syncService != null && serverId != null) {
             Diff diff = new Diff(Diff.Type.USER_ADDED, new UserInfo(username, serverId));
             registry.applyDiff(diff);
-            syncService.sendDiff(diff);
+            syncService.broadcastDiff(diff);
         }
+
         sendOnlineUsersToAll();
         sendAllChannelsToAll();
-        log("Cliente " + username + " se ha conectado.");
+        log("Cliente " + username + " conectado.");
     }
 
     public synchronized void removeClient(PrintWriter out) {
-        String usernameToRemove = null;
-        for (Map.Entry<String, PrintWriter> entry : clients.entrySet()) {
-            if (entry.getValue().equals(out)) {
-                usernameToRemove = entry.getKey();
-                break;
-            }
+        String user = null;
+        for (var e : clients.entrySet()) {
+            if (e.getValue().equals(out)) { user = e.getKey(); break; }
         }
-        if (usernameToRemove != null) {
-            clients.remove(usernameToRemove);
-            if (registry != null && syncService != null && usernameToRemove != null) {
-                Diff diff = new Diff(Diff.Type.USER_REMOVED, new UserInfo(usernameToRemove, serverId));
+        if (user != null) {
+            clients.remove(user);
+            channels.values().forEach(set -> set.remove(out));
+            if (registry != null && syncService != null && serverId != null) {
+                Diff diff = new Diff(Diff.Type.USER_REMOVED, new UserInfo(user, serverId));
                 registry.applyDiff(diff);
                 syncService.broadcastDiff(diff);
             }
-
-            for (Set<PrintWriter> channelClients : channels.values()) {
-                channelClients.remove(out);
-            }
             sendOnlineUsersToAll();
-            log("Cliente desconectado: " + usernameToRemove);
+            log("Cliente " + user + " desconectado.");
         }
     }
 
+    // ─── Envío mensajes ─────────────────────────────
     public synchronized void sendToUser(String username, String message, byte[] file) {
+        // 1) Intento local
         PrintWriter out = clients.get(username);
         if (out != null) {
-            String[] messageParts = message.split(":", 2);
-            String sender = messageParts[0];
-            String msgContent = messageParts.length > 1 ? messageParts[1] : messageParts[0];
-            String formattedMessage = "MSG:" + username + ":" + sender + ":" + msgContent;
-            System.out.println("Enviando mensaje a usuario " + username + ": " + formattedMessage);
-            out.println(cryptoService.encrypt(formattedMessage));
+            String[] parts = message.split(":", 2);
+            String sender = parts[0], body = parts.length>1?parts[1]:parts[0];
+            String fmt = "MSG:" + username + ":" + sender + ":" + body;
+            out.println(cryptoService.encrypt(fmt));
             if (file != null) {
-                String fileName = "file_" + System.currentTimeMillis() + ".dat";
-                saveFileOnServer(file, fileName, username);
-                String fileMessage = "FILE|" + username + "|" + sender + "|" + fileName + "|" + Base64.getEncoder().encodeToString(file);
-                out.println(cryptoService.encrypt(fileMessage));
+                String fn = "file_"+System.currentTimeMillis()+".dat";
+                saveFileOnServer(file, fn, username);
+                String fmsg = "FILE|" + username+"|"+sender+"|"+fn+"|"+Base64.getEncoder().encodeToString(file);
+                out.println(cryptoService.encrypt(fmsg));
             }
-            logMessage(sender, username, msgContent, file);
-            log("Mensaje enviado a " + username + " desde " + sender + ": " + msgContent);
+            log("Sent to "+username+" from "+sender+": "+body);
+            return;
+        }
+
+        // 2) Reenvío remoto
+        if (registry!=null && hbReceiver!=null) {
+            UserInfo ui = registry.getAllUsers().stream()
+                               .filter(u->u.getUsername().equals(username))
+                               .findFirst().orElse(null);
+            if (ui!=null) {
+                String peerIp = hbReceiver.getLiveServers().get(ui.getServerId());
+                if (peerIp!=null) {
+                    try (Socket sock = new Socket(peerIp, chatPort);
+                         PrintWriter pw = new PrintWriter(sock.getOutputStream(),true)) {
+                        String[] parts = message.split(":",2);
+                        String sender = parts[0], body = parts.length>1?parts[1]:parts[0];
+                        String fwd = "FORWARD:"+username+":"+sender+":"+body;
+                        pw.println(cryptoService.encrypt(fwd));
+                        log("Forward "+username+"->"+ui.getServerId());
+                    } catch(IOException ex) {
+                        log("Error forward a "+username+"@"+ui.getServerId()+": "+ex);
+                    }
+                }
+            }
         }
     }
 

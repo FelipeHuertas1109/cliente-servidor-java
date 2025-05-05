@@ -1,4 +1,3 @@
-// src/main/java/com/mycompany/chatserverproject/Main.java
 package com.mycompany.chatserverproject;
 
 import com.mycompany.configloaderproject.ConfigLoader;
@@ -9,80 +8,86 @@ import com.mycompany.chatserverproject.distributed.HeartbeatReceiver;
 import com.mycompany.chatserverproject.distributed.UserFileRegistry;
 import com.mycompany.chatserverproject.distributed.StateSyncService;
 
-import java.net.InetSocketAddress;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
         try {
-            // 1) Carga configuración
+            System.out.println("[DEBUG] Cargando configuración");
             ConfigLoader config = new ConfigLoader();
             int port           = Integer.parseInt(config.getProperty("port"));
             int maxConnections = Integer.parseInt(config.getProperty("max_conexiones"));
-            String dbUrl  = config.getProperty("db_url");
-            String dbUser = config.getProperty("db_user");
-            String dbPass = config.getProperty("db_pass");
+            String dbUrl       = config.getProperty("db_url");
+            String dbUser      = config.getProperty("db_user");
+            String dbPass      = config.getProperty("db_pass");
 
-            if (port <= 0) {
-                System.err.println("Propiedad 'port' inválida. Usando 12345");
-                port = 12345;
-            }
-            if (maxConnections <= 0) {
-                System.err.println("Propiedad 'max_conexiones' inválida. Usando 10");
-                maxConnections = 10;
-            }
-            if (dbUrl == null || dbUrl.trim().isEmpty()) {
+            if (port <= 0)            port = 12345;
+            if (maxConnections <= 0)  maxConnections = 10;
+            if (dbUrl == null || dbUrl.trim().isEmpty())
                 throw new IllegalArgumentException("db_url es obligatorio");
-            }
-            if (dbUser == null || dbUser.trim().isEmpty()) {
+            if (dbUser == null || dbUser.trim().isEmpty())
                 throw new IllegalArgumentException("db_user es obligatorio");
-            }
-            if (dbPass == null) {
-                System.err.println("Advertencia: db_pass no definida. Usando vacío.");
-                dbPass = "";
-            }
+            if (dbPass == null) dbPass = "";
 
-            // 2) Conexión a BD y creación del ChatServer
-            DatabaseConnection db = new DatabaseConnector(dbUrl, dbUser, dbPass);
-            ChatServer server = ServerFactory.createServer(port, maxConnections, db, null);
+            System.out.println("[DEBUG] Conectando a la BD y creando ChatServer");
+            DatabaseConnection dbConn = new DatabaseConnector(dbUrl, dbUser, dbPass);
+            ChatServer server = ServerFactory.createServer(port, maxConnections, dbConn, null);
 
-            // 3) Parámetros distribuidos
+            System.out.println("[DEBUG] Configurando IDs y puertos distribuidos");
             String serverId = config.getProperty("server_id");
             int    syncPort = Integer.parseInt(config.getProperty("sync_port"));
 
-            // 4) Descubrimiento con heartbeats
-            HeartbeatSender hbSender   = new HeartbeatSender(serverId);
+            System.out.println("[DEBUG] Arrancando Heartbeats");
+            HeartbeatSender hbSender = new HeartbeatSender(serverId);
             hbSender.start();
             HeartbeatReceiver hbReceiver = new HeartbeatReceiver();
             hbReceiver.start();
+            server.setHeartbeatReceiver(hbReceiver);
+            server.setChatPort(port);
 
-            // 5) Registry y sincronización de estado
+            System.out.println("[DEBUG] Arrancando StateSyncService");
             UserFileRegistry registry = new UserFileRegistry();
-            StateSyncService  syncService =
+            StateSyncService syncService =
                 new StateSyncService(syncPort, registry, hbReceiver);
             syncService.start();
 
-            // 6) Montar la UI (recibe servidor, receptor de heartbeats y registry)
+            System.out.println("[DEBUG] Montando UI distribuida");
             ServerUI ui = new ServerGUI(server, hbReceiver, registry);
             server.setUI(ui);
 
-            // 7) Inyectar dependencias en ChatServer
+            System.out.println("[DEBUG] Inyectando dependencias en ChatServer");
             server.setServerId(serverId);
             server.setUserFileRegistry(registry);
             server.setStateSyncService(syncService);
 
-            // 8) Dump inicial desde cada par vivo (usar host, no peerId)
-            for (Map.Entry<String, InetSocketAddress> entry
-                    : hbReceiver.getLiveServers().entrySet()) {
-                String host = entry.getValue().getHostString();
-                syncService.requestFullDump(host, syncPort);
+            // Esperar hasta descubrir al menos un peer
+            System.out.println("[DEBUG] Esperando discovery de peers…");
+            long deadline = System.currentTimeMillis() + 10_000;
+            while (hbReceiver.getLiveServers().isEmpty() &&
+                   System.currentTimeMillis() < deadline) {
+                Thread.sleep(200);
             }
 
-            // 9) Arrancar el listener de clientes
+            if (hbReceiver.getLiveServers().isEmpty()) {
+                System.err.println("[WARN] No se descubrió ningún peer vivo en 10s; salto full-dump inicial");
+            } else {
+                Thread.sleep(500);  // margen para que el peer arranque su listener
+
+                System.out.println("[DEBUG] Lanzando full-dump inicial a peers: "
+                                   + hbReceiver.getLiveServers().values());
+                for (String peerHost : hbReceiver.getLiveServers().values()) {
+                    try {
+                        syncService.requestFullDump(peerHost, syncPort);
+                    } catch (Exception ex) {
+                        System.err.println("[ERROR] sync con " + peerHost + ": " + ex.getMessage());
+                    }
+                }
+            }
+
+            System.out.println("[DEBUG] Arrancando listener de clientes");
             server.start();
 
         } catch (Exception e) {
-            System.err.println("Error al iniciar el servidor: " + e.getMessage());
+            System.err.println("[FATAL] Error al iniciar el servidor: " + e.getMessage());
             e.printStackTrace();
         }
     }

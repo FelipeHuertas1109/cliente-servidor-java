@@ -722,3 +722,333 @@ may 04, 2025 8:01:27 P. M. com.mycompany.chatserverproject.ChatServer log
 INFO: Servidor iniciado en puerto 5000
 may 04, 2025 8:22:03 P. M. com.mycompany.chatserverproject.ChatServer log
 INFO: Servidor iniciado en puerto 5000
+may 04, 2025 9:33:19 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 9:33:45 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Registro de usuario manuel: Éxito
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel se ha conectado.
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 9:34:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 9:34:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Registro de usuario fantachita: Éxito
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente fantachita se ha conectado.
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a fantachita
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a fantachita
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a fantachita
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a fantachita
+may 04, 2025 9:34:51 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a fantachita
+may 04, 2025 9:37:37 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con fantachita enviado a manuel
+may 04, 2025 9:37:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Mensaje enviado a fantachita desde manuel: hola
+may 04, 2025 9:37:42 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del chat con manuel enviado a fantachita
+may 04, 2025 9:40:21 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 9:40:21 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: manuel
+may 04, 2025 9:40:22 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 9:40:22 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente desconectado: fantachita
+may 04, 2025 9:43:42 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 9:47:37 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel se ha conectado.
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 9:47:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 9:48:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 9:48:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Canal lan creado por manuel
+may 04, 2025 9:48:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #lan enviado a manuel
+may 04, 2025 9:48:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 9:48:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #lan enviado a manuel
+may 04, 2025 9:54:13 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 9:54:34 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel se ha conectado.
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 9:54:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 10:23:47 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 10:26:50 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel se ha conectado.
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 10:26:56 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 10:40:43 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 10:40:57 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel se ha conectado.
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 10:41:07 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 10:55:46 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 10:56:09 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel conectado.
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 10:56:16 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 11:01:58 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:01:58 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel desconectado.
+may 04, 2025 11:08:34 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 11:08:50 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para fantachita: Éxito
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente fantachita conectado.
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a fantachita
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a fantachita
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a fantachita
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a fantachita
+may 04, 2025 11:08:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a fantachita
+may 04, 2025 11:14:22 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 11:14:32 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel conectado.
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 11:14:41 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 11:15:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:15:08 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel desconectado.
+may 04, 2025 11:16:42 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 11:17:02 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel conectado.
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 11:17:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 11:22:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:22:36 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel desconectado.
+may 04, 2025 11:29:14 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 11:29:23 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel conectado.
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 11:29:31 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 04, 2025 11:49:06 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 11:49:52 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel conectado.
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 04, 2025 11:49:59 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 05, 2025 12:13:02 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 05, 2025 12:13:02 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel desconectado.
+may 05, 2025 12:27:14 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 05, 2025 12:30:25 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 05, 2025 12:30:40 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Intento de autenticación para manuel: Éxito
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea actualizada para todos los clientes
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales actualizada para todos los clientes
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Cliente manuel conectado.
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios registrados enviada a manuel
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de usuarios en línea enviada a manuel
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de canales unidos enviada a manuel
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Lista de todos los canales enviada a manuel
+may 05, 2025 12:30:49 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Foto de perfil enviada a manuel
+may 05, 2025 12:36:47 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Historial del canal #lan enviado a manuel
+may 05, 2025 12:36:55 A. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Solicitud de unión al canal test por manuel enviada al creador pepe
