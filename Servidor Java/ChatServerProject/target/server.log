@@ -716,3 +716,5 @@ may 04, 2025 1:19:00 P. M. com.mycompany.chatserverproject.ChatServer log
 INFO: Servidor iniciado en puerto 5000
 may 04, 2025 1:19:18 P. M. com.mycompany.chatserverproject.ChatServer log
 INFO: Nuevo cliente conectado: /192.168.20.21
+may 04, 2025 7:43:10 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
