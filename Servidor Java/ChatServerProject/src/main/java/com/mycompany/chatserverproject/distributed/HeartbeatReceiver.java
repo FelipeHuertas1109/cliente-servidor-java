@@ -77,23 +77,31 @@ public class HeartbeatReceiver {
      *
      * Mensaje esperado: "HEARTBEAT;<serverId>;<timestamp>"
      */
-    private void handleHeartbeat(String msg, String host, int port) {
-        String[] parts = msg.split(";");
-        if (parts.length != 3 || !"HEARTBEAT".equals(parts[0])) {
-            return;
-        }
+    private void handleHeartbeat(String raw, String host, int port) {
+    if (raw == null) return;
 
-        String peerId = parts[1];
-        long ts;
-        try {
-            ts = Long.parseLong(parts[2]);
-        } catch (NumberFormatException ex) {
-            return;
-        }
+    // 1) Encuentra dónde empieza realmente el mensaje
+    int idx = raw.indexOf("HEARTBEAT");
+    if (idx < 0) return;  // no es un heartbeat válido
 
-        lastSeen.put(peerId, ts);
-        liveServers.put(peerId, new InetSocketAddress(host, port));
+    String msg = raw.substring(idx);
+
+    // 2) Separa tanto por ':' como por ';'
+    String[] parts = msg.split("[:;]");
+    if (parts.length < 3) return;
+
+    String peerId = parts[1];
+    long ts;
+    try {
+        ts = Long.parseLong(parts[2]);
+    } catch (NumberFormatException e) {
+        return;
     }
+
+    // 3) Actualiza tu mapa de últimos vistos Y tu mapa de liveServers
+    lastSeen.put(peerId, ts);
+    liveServers.put(peerId, new InetSocketAddress(host, port));
+}
 
     /**
      * Elimina de liveServers y lastSeen a los peers que no envían heartbeats
