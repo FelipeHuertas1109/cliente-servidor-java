@@ -16,6 +16,18 @@ import java.net.Socket;
 import java.sql.*;
 import java.util.*;
 import java.util.logging.*;
+import com.mycompany.chatserverproject.distributed.UserFileRegistry;
+import com.mycompany.chatserverproject.distributed.StateSyncService;
+import com.mycompany.chatserverproject.distributed.Diff;
+import com.mycompany.chatserverproject.distributed.UserInfo;
+import com.mycompany.chatserverproject.distributed.FileInfo;
+
+import java.util.Base64;
+import java.util.Set;
+import java.util.HashSet;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 
 public class ChatServer {
 
@@ -27,6 +39,11 @@ public class ChatServer {
     private final Map<String, Set<PrintWriter>> channels = new HashMap<>();
     private final CryptoService cryptoService = new CryptoService();
     private final Logger logger;
+    // inyectados desde Main
+    private UserFileRegistry registry;
+    private StateSyncService syncService;
+    private String serverId;
+
 
     public ChatServer(int port, int maxConnections, DatabaseConnection db, ServerUI ui) {
         this.port = port;
@@ -61,6 +78,21 @@ public class ChatServer {
     public void setUI(ServerUI ui) {
         this.ui = ui;
     }
+    /** Identificador único de este servidor */
+    public void setServerId(String serverId) {
+        this.serverId = serverId;
+    }
+
+    /** Registry distribuido para usuarios y archivos */
+    public void setUserFileRegistry(UserFileRegistry registry) {
+        this.registry = registry;
+    }
+
+    /** Servicio para enviar diffs a los pares */
+    public void setStateSyncService(StateSyncService syncService) {
+        this.syncService = syncService;
+    }
+
 
     public void start() {
         try (ServerSocket serverSocket = new ServerSocket(port)) {
@@ -80,6 +112,11 @@ public class ChatServer {
 
     public synchronized void addClient(String username, PrintWriter out) {
         clients.put(username, out);
+        if (registry != null && syncService != null && serverId != null) {
+            Diff diff = new Diff(Diff.Type.USER_ADDED, new UserInfo(username, serverId));
+            registry.applyDiff(diff);
+            syncService.sendDiff(diff);
+        }
         sendOnlineUsersToAll();
         sendAllChannelsToAll();
         log("Cliente " + username + " se ha conectado.");
@@ -95,6 +132,12 @@ public class ChatServer {
         }
         if (usernameToRemove != null) {
             clients.remove(usernameToRemove);
+            if (registry != null && syncService != null && usernameToRemove != null) {
+                Diff diff = new Diff(Diff.Type.USER_REMOVED, new UserInfo(usernameToRemove, serverId));
+                registry.applyDiff(diff);
+                syncService.broadcastDiff(diff);
+            }
+
             for (Set<PrintWriter> channelClients : channels.values()) {
                 channelClients.remove(out);
             }
@@ -541,4 +584,17 @@ public class ChatServer {
     public Map<String, PrintWriter> getClients() {
         return clients;
     }
+    private String computeChecksum(byte[] data) {
+    try {
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        byte[] digest = md.digest(data);
+        StringBuilder sb = new StringBuilder();
+        for (byte b : digest) {
+            sb.append(String.format("%02x", b));
+        }
+        return sb.toString();
+    } catch (NoSuchAlgorithmException e) {
+        return "";
+    }
+}
 }

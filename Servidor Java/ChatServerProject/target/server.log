@@ -712,3 +712,7 @@ abr 10, 2025 7:11:19 P. M. com.mycompany.chatserverproject.ChatServer log
 INFO: Lista de usuarios en línea actualizada para todos los clientes
 abr 10, 2025 7:11:19 P. M. com.mycompany.chatserverproject.ChatServer log
 INFO: Cliente desconectado: papu
+may 04, 2025 1:19:00 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Servidor iniciado en puerto 5000
+may 04, 2025 1:19:18 P. M. com.mycompany.chatserverproject.ChatServer log
+INFO: Nuevo cliente conectado: /192.168.20.21
